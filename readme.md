@@ -2,8 +2,6 @@
 
 > Require a module like [`require()`](https://nodejs.org/api/globals.html#globals_require) but from a given path
 
-Unlike `require()` it returns `null` instead of throwing when the module can't be found.
-
 
 ## Install
 
@@ -26,6 +24,12 @@ reqFrom('foo', './bar');
 ## API
 
 ### reqFrom(fromDir, moduleId)
+
+Like `require()`, throws when the module can't be found.
+
+### reqFrom.silent(fromDir, moduleId)
+
+Returns `null` instead of throwing when the module can't be found.
 
 #### fromDir
 

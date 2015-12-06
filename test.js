@@ -3,5 +3,7 @@ import fn from './';
 
 test(t => {
 	t.is(fn('fixture', './fixture'), 'unicorn');
-	t.is(fn('fixture', './fixture2'), null);
+	t.throws(() => fn('fixture', './nonexistent'));
+	t.is(fn.silent('fixture', './fixture'), 'unicorn');
+	t.is(fn.silent('fixture', './nonexistent'), null);
 });
