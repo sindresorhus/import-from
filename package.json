@@ -1,6 +1,6 @@
 {
   "name": "req-from",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Require a module like `require()` but from a given path",
   "license": "MIT",
   "repository": "sindresorhus/req-from",
