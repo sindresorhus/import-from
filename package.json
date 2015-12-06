@@ -1,0 +1,37 @@
+{
+  "name": "req-from",
+  "version": "0.0.0",
+  "description": "Require a module like `require()` but from a given path",
+  "license": "MIT",
+  "repository": "sindresorhus/req-from",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "require",
+    "resolve",
+    "path",
+    "module",
+    "from",
+    "like",
+    "path"
+  ],
+  "dependencies": {
+    "resolve-from": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}
