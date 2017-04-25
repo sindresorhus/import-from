@@ -1,9 +1,9 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 test(t => {
-	t.is(fn('fixture', './fixture'), 'unicorn');
-	t.throws(() => fn('fixture', './nonexistent'));
-	t.is(fn.silent('fixture', './fixture'), 'unicorn');
-	t.is(fn.silent('fixture', './nonexistent'), null);
+	t.is(m('fixture', './fixture'), 'unicorn');
+	t.throws(() => m('fixture', './nonexistent'));
+	t.is(m.silent('fixture', './fixture'), 'unicorn');
+	t.is(m.silent('fixture', './nonexistent'), null);
 });
