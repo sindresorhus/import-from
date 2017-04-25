@@ -24,14 +24,13 @@
     "path",
     "module",
     "from",
-    "like",
-    "path"
+    "like"
   ],
   "dependencies": {
     "resolve-from": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "^0.17.0",
+    "xo": "^0.16.0"
   }
 }
