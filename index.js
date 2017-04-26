@@ -1,11 +1,9 @@
 'use strict';
-var resolveFrom = require('resolve-from');
+const resolveFrom = require('resolve-from');
 
-module.exports = function (fromDir, moduleId) {
-	return require(resolveFrom(fromDir, moduleId));
-};
+module.exports = (fromDir, moduleId) => require(resolveFrom(fromDir, moduleId));
 
-module.exports.silent = function (fromDir, moduleId) {
+module.exports.silent = (fromDir, moduleId) => {
 	try {
 		return require(resolveFrom(fromDir, moduleId));
 	} catch (err) {
