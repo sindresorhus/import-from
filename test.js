@@ -1,9 +1,10 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 test('reqFrom()', t => {
 	t.is(m('fixture', './fixture'), 'unicorn');
 	t.throws(() => m('fixture', './nonexistent'));
+	
 	const moduleNotFoundError = t.throws(() => {
 		m('fixture', './nonexistent');
 	}, Error);
