@@ -1,17 +1,17 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
-test('reqFrom', t => {
-	t.is(fn('fixture', './fixture'), 'unicorn');
-	t.throws(() => fn('fixture', './nonexistent'));
+test('reqFrom()', t => {
+	t.is(m('fixture', './fixture'), 'unicorn');
+	t.throws(() => m('fixture', './nonexistent'));
 	const moduleNotFoundError = t.throws(() => {
-		fn('fixture', './nonexistent');
+		m('fixture', './nonexistent');
 	}, Error);
 	t.is(moduleNotFoundError.code, 'MODULE_NOT_FOUND');
 	t.is(moduleNotFoundError.message, 'Cannot find module \'./nonexistent\'');
 });
 
-test('reqFrom.silent', t => {
-	t.is(fn.silent('fixture', './fixture'), 'unicorn');
-	t.is(fn.silent('fixture', './nonexistent'), null);
+test('reqFrom().silent', t => {
+	t.is(m.silent('fixture', './fixture'), 'unicorn');
+	t.is(m.silent('fixture', './nonexistent'), null);
 });
