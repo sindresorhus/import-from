@@ -15,7 +15,7 @@ $ npm install --save req-from
 ```js
 const reqFrom = require('req-from');
 
-// there's a file at `./foo/bar.js`
+// There is a file at `./foo/bar.js`
 
 reqFrom('foo', './bar');
 ```
@@ -67,4 +67,4 @@ reqFromFoo('./baz');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -24,7 +24,9 @@
     "path",
     "module",
     "from",
-    "like"
+    "like",
+    "import",
+    "path"
   ],
   "dependencies": {
     "resolve-from": "^3.0.0"
