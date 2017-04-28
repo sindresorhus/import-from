@@ -11,7 +11,7 @@ test('reqFrom()', t => {
 	t.is(moduleNotFoundError.message, 'Cannot find module \'./nonexistent\'');
 });
 
-test('reqFrom().silent', t => {
+test('reqFrom.silent()', t => {
 	t.is(m.silent('fixture', './fixture'), 'unicorn');
 	t.is(m.silent('fixture', './nonexistent'), null);
 });
