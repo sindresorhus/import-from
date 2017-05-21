@@ -1,33 +1,33 @@
-# req-from [![Build Status](https://travis-ci.org/sindresorhus/req-from.svg?branch=master)](https://travis-ci.org/sindresorhus/req-from)
+# import-from [![Build Status](https://travis-ci.org/sindresorhus/import-from.svg?branch=master)](https://travis-ci.org/sindresorhus/import-from)
 
-> Require a module like [`require()`](https://nodejs.org/api/globals.html#globals_require) but from a given path
+> Import a module like with [`require()`](https://nodejs.org/api/globals.html#globals_require) but from a given path
 
 
 ## Install
 
 ```
-$ npm install --save req-from
+$ npm install --save import-from
 ```
 
 
 ## Usage
 
 ```js
-const reqFrom = require('req-from');
+const importFrom = require('import-from');
 
 // There is a file at `./foo/bar.js`
 
-reqFrom('foo', './bar');
+importFrom('foo', './bar');
 ```
 
 
 ## API
 
-### reqFrom(fromDir, moduleId)
+### importFrom(fromDir, moduleId)
 
 Like `require()`, throws when the module can't be found.
 
-### reqFrom.silent(fromDir, moduleId)
+### importFrom.silent(fromDir, moduleId)
 
 Returns `null` instead of throwing when the module can't be found.
 
@@ -35,7 +35,7 @@ Returns `null` instead of throwing when the module can't be found.
 
 Type: `string`
 
-Directory to require from.
+Directory to import from.
 
 #### moduleId
 
@@ -46,23 +46,23 @@ What you would use in `require()`.
 
 ## Tip
 
-Create a partial using a bound function if you want to require from the same `fromDir` multiple times:
+Create a partial using a bound function if you want to import from the same `fromDir` multiple times:
 
 ```js
-const reqFromFoo = reqFrom.bind(null, 'foo');
+const importFromFoo = importFrom.bind(null, 'foo');
 
-reqFromFoo('./bar');
-reqFromFoo('./baz');
+importFromFoo('./bar');
+importFromFoo('./baz');
 ```
 
 
 ## Related
 
-- [req-cwd](https://github.com/sindresorhus/req-cwd) - Require a module from the current working directory
+- [import-cwd](https://github.com/sindresorhus/import-cwd) - Import a module from the current working directory
 - [resolve-from](https://github.com/sindresorhus/resolve-from) - Resolve the path of a module from a given path
 - [resolve-cwd](https://github.com/sindresorhus/resolve-cwd) - Resolve the path of a module from the current working directory
 - [resolve-pkg](https://github.com/sindresorhus/resolve-pkg) - Resolve the path of a package regardless of it having an entry point
-- [lazy-req](https://github.com/sindresorhus/lazy-req) - Require modules lazily
+- [import-lazy](https://github.com/sindresorhus/import-lazy) - Import modules lazily
 
 
 ## License

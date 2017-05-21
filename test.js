@@ -1,7 +1,7 @@
 import test from 'ava';
 import m from '.';
 
-test('reqFrom()', t => {
+test('importFrom()', t => {
 	t.is(m('fixture', './fixture'), 'unicorn');
 	t.throws(() => m('fixture', './nonexistent'));
 
@@ -12,7 +12,7 @@ test('reqFrom()', t => {
 	t.is(moduleNotFoundError.message, 'Cannot find module \'./nonexistent\'');
 });
 
-test('reqFrom.silent()', t => {
+test('importFrom.silent()', t => {
 	t.is(m.silent('fixture', './fixture'), 'unicorn');
 	t.is(m.silent('fixture', './nonexistent'), null);
 });

@@ -1,9 +1,9 @@
 {
-  "name": "req-from",
+  "name": "import-from",
   "version": "2.0.0",
-  "description": "Require a module like `require()` but from a given path",
+  "description": "Import a module like with `require()` but from a given path",
   "license": "MIT",
-  "repository": "sindresorhus/req-from",
+  "repository": "sindresorhus/import-from",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
