@@ -5,12 +5,13 @@ const resolveFrom = require('resolve-from');
 
 const hasNativeFunction = typeof Module.createRequireFromPath === 'function';
 
-const requireFromPath = hasNativeFunction ?
-	(fromDir, moduleId) => {
-		const p = path.resolve(fromDir, 'index.js');
-		return Module.createRequireFromPath(p)(moduleId);
-	} :
-	(fromDir, moduleId) => require(resolveFrom(fromDir, moduleId));
+const requireFromPath = (fromDir, moduleId) => {
+	if (!hasNativeFunction) {
+		return require(resolveFrom(fromDir, moduleId));
+	}
+
+	return Module.createRequireFromPath(path.resolve(fromDir, 'index.js'))(moduleId);
+};
 
 module.exports = requireFromPath;
 
