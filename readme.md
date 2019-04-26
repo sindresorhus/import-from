@@ -1,12 +1,12 @@
 # import-from [![Build Status](https://travis-ci.org/sindresorhus/import-from.svg?branch=master)](https://travis-ci.org/sindresorhus/import-from)
 
-> Import a module like with [`require()`](https://nodejs.org/api/globals.html#globals_require) but from a given path
+> Import a module like with [`require()`](https://nodejs.org/api/modules.html#modules_require_id) but from a given path
 
 
 ## Install
 
 ```
-$ npm install --save import-from
+$ npm install import-from
 ```
 
 
@@ -23,15 +23,15 @@ importFrom('foo', './bar');
 
 ## API
 
-### importFrom(fromDir, moduleId)
+### importFrom(fromDirectory, moduleId)
 
 Like `require()`, throws when the module can't be found.
 
-### importFrom.silent(fromDir, moduleId)
+### importFrom.silent(fromDirectory, moduleId)
 
-Returns `null` instead of throwing when the module can't be found.
+Returns `undefined` instead of throwing when the module can't be found.
 
-#### fromDir
+#### fromDirectory
 
 Type: `string`
 
