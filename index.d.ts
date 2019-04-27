@@ -12,7 +12,7 @@ declare const importFrom: {
 
 	try {
 		const bar = importFrom('foo', './bar');
-		// do something with `bar`
+		// Do something with `bar`
 	} catch (error) {
 		// `error` is thrown when `./bar` can't be found
 	}
@@ -32,7 +32,7 @@ declare const importFrom: {
 	import importFrom = require('import-from');
 
 	const bar = importFrom.silent('foo', './bar');
-	// do something with `bar`, may be `undefined` when `./bar` can't be found
+	// Do something with `bar`, may be `undefined` when `./bar` can't be found
 	```
 	*/
 	silent(fromDirectory: string, moduleId: string): unknown;
