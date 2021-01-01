@@ -1,4 +1,4 @@
-# import-from [![Build Status](https://travis-ci.org/sindresorhus/import-from.svg?branch=master)](https://travis-ci.org/sindresorhus/import-from)
+# import-from
 
 > Import a module like with [`require()`](https://nodejs.org/api/modules.html#modules_require_id) but from a given path
 
