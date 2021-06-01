@@ -2,13 +2,11 @@
 
 > Import a module like with [`require()`](https://nodejs.org/api/modules.html#modules_require_id) but from a given path
 
-
 ## Install
 
 ```
 $ npm install import-from
 ```
-
 
 ## Usage
 
@@ -19,7 +17,6 @@ const importFrom = require('import-from');
 
 importFrom('foo', './bar');
 ```
-
 
 ## API
 
@@ -43,7 +40,6 @@ Type: `string`
 
 What you would use in `require()`.
 
-
 ## Tip
 
 Create a partial using a bound function if you want to import from the same `fromDir` multiple times:
@@ -55,7 +51,6 @@ importFromFoo('./bar');
 importFromFoo('./baz');
 ```
 
-
 ## Related
 
 - [import-cwd](https://github.com/sindresorhus/import-cwd) - Import a module from the current working directory
@@ -64,8 +59,3 @@ importFromFoo('./baz');
 - [resolve-pkg](https://github.com/sindresorhus/resolve-pkg) - Resolve the path of a package regardless of it having an entry point
 - [import-lazy](https://github.com/sindresorhus/import-lazy) - Import modules lazily
 - [import-global](https://github.com/sindresorhus/import-global) - Import a globally installed module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

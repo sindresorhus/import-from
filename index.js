@@ -1,10 +1,11 @@
 'use strict';
-const resolveFrom = require('resolve-from');
+const path = require('path');
+const {createRequire} = require('module');
 
-module.exports = (fromDirectory, moduleId) => require(resolveFrom(fromDirectory, moduleId));
+module.exports = (fromDirectory, moduleId) => createRequire(path.resolve(fromDirectory, 'noop.js'))(moduleId);
 
 module.exports.silent = (fromDirectory, moduleId) => {
 	try {
-		return require(resolveFrom(fromDirectory, moduleId));
-	} catch (_) {}
+		return createRequire(path.resolve(fromDirectory, 'noop.js'))(moduleId);
+	} catch {}
 };
